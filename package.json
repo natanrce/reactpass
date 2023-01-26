@@ -1,8 +1,9 @@
 {
   "name": "chrome-react-seo-extension",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
+    "@craco/craco": "^7.0.0",
+    "@svgr/webpack": "^6.5.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,23 +11,19 @@
     "@types/node": "^16.18.11",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "classnames": "^2.3.2",
+    "history": "^5.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-input-range-fork-for-react-18": "^1.0.0",
+    "react-intl": "^6.2.5",
+    "react-router-dom": "^6.7.0",
+    "react-scripts": "^5.0.1",
     "typescript": "^4.9.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "build:craco": "set INLINE_RUNTIME_CHUNK=false && craco build"
   },
   "browserslist": {
     "production": [
@@ -39,5 +36,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.209",
+    "autoprefixer": "^10.4.13",
+    "copy-webpack-plugin": "^11.0.0",
+    "postcss": "^8.4.21",
+    "svg-inline-loader": "^0.8.2",
+    "tailwindcss": "^3.2.4",
+    "ts-loader": "^9.4.2",
+    "url-loader": "^4.1.1"
   }
 }
